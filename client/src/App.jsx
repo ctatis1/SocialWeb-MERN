@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Container, Navbar, Row, Col } from 'react-bootstrap';
-import Form from './components/Form/Form';
 import Posts from './components/Posts/Posts';
 import { useDispatch } from 'react-redux';
 import { getPosts } from './actions/posts'
+import FormPost from './components/Form/Form';
 
 import './styles.css'
 
@@ -20,7 +20,7 @@ const App = () => {
             <Navbar bg='primary' variant='dark' expand='lg'>
                 <Container>
                     <Navbar.Brand href="#home">
-                        Memories
+                        Movie Reviews
                     </Navbar.Brand>
                 </Container>
             </Navbar>
@@ -30,7 +30,7 @@ const App = () => {
                         <Posts />
                     </Col>
                     <Col md={4}>
-                        <Form />
+                        <FormPost />
                     </Col>
                 </Row>
             </Container>
