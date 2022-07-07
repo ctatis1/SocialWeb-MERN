@@ -26,8 +26,7 @@ const FormPost = () => {
     }
 
     return (
-        <Container>
-            <h3>Form</h3>
+        <Container className='m-2'>
             <h6>Creating a new Review</h6>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-2">
@@ -66,7 +65,7 @@ const FormPost = () => {
                         onChange={(e) => setPostData({ ...postData, tags: e.target.value })} 
                         />
                 </Form.Group>
-                <FileBase type='file' multiple={false} onDone={({base64}) => setPostData({ ...postData, selectedField: base64 })} />
+                <FileBase type='file' multiple={false} onDone={({base64}) => setPostData({ ...postData, selectedFile: base64 })} />
                 <div className="d-grid gap-2 mt-2">
                     <Button variant="primary" type="submit">
                         Submit
